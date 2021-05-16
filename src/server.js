@@ -25,7 +25,7 @@ app.use(handleError);
 app.use('*',errorNotFound);
 
 function start(port,MONGODB_URL){
-  mongoose.connect(MONGODB_URL||'mongodb://localhost:27017/auth', {
+  mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
