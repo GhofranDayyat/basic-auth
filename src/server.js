@@ -30,7 +30,7 @@ function start(port,MONGODB_URL){
     useUnifiedTopology: true
   })
     .then(() => {
-      app.listen(port, () => console.log(`server up ${port}`));
+      app.listen(port||6666, () => console.log(`server up ${port}`));
     })
     .catch(e => console.error('Could not start server', e.message));
 }
