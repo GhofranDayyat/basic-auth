@@ -25,12 +25,12 @@ app.use(handleError);
 app.use('*',errorNotFound);
 
 function start(port,MONGODB_URL){
-  mongoose.connect(MONGODB_URL||'mongodb://localhost:27017/auth', {
+  mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
     .then(() => {
-      app.listen(port, () => console.log(`server up ${port}`));
+      app.listen(port||6666, () => console.log(`server up ${port}`));
     })
     .catch(e => console.error('Could not start server', e.message));
 }
