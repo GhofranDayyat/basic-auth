@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 const router = express.Router();
 const Users = require('./models/users-model.js');
-const baseAut = require('./middleware/oauth');
+const baseAut = require('./middleware/basic.js');
 
 
 router.get('/',(req,res)=>{
