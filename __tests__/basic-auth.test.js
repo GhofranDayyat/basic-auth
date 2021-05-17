@@ -26,7 +26,6 @@ describe('Test routes',()=>{
         const checkpassword = await bcrypt.compare(user1.password,teatUser.password)
         expect(teatUser.username).toEqual(user1.username)
         expect(checkpassword).toEqual(true)
-
         console.log(teatUser.username,checkpassword);
     })
 

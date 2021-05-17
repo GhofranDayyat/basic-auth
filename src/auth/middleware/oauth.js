@@ -5,6 +5,7 @@ const Users = require('../models/users-model');
 
 
 async function baseAut(req,res,next){
+
     let basicHeaderParts = req.headers.authorization.split(' ');  // ['Basic', 'sdkjdsljd=']
     let encodedString = basicHeaderParts.pop();  // sdkjdsljd=
     let decodedString = base64.decode(encodedString); // "username:password"
